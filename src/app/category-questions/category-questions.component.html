@@ -8,11 +8,22 @@
             <a [routerLink]="['/question/', question.questionSlug]">{{question.question}}</a>
           </h3>
           <p matLine class="icons-line">
-            <i class="list-single-icon fa fa-thumbs-o-up" (click)="addPositiveVote(question)" aria-hidden="true"></i>
+            <!--<i class="list-single-icon fa fa-thumbs-o-up" (click)="addPositiveVote(question)" aria-hidden="true"></i>-->
+            <button mat-icon-button class="list-single-icon fa fa-thumbs-o-up" (click)="addPositiveVote(question)" aria-hidden="true">
+              <mat-icon>+</mat-icon>
+            </button>
             <span class="list-single-icon-number">{{question.positiveVotes}}</span>
-            <i class="list-single-icon fa fa-thumbs-o-down" (click)="addNegativeVote(question)"></i>
+            <!--<i class="list-single-icon fa fa-thumbs-o-down" (click)="addNegativeVote(question)"></i>-->
+            <button mat-icon-button class="list-single-icon fa fa-thumbs-o-down" (click)="addNegativeVote(question)">
+              <mat-icon>-</mat-icon>
+            </button>
             <span class="list-single-icon-number">{{question.negativeVotes}}</span>
-            <i class="list-single-icon fa fa fa-trash-o" (click)="delete(question.id)"></i>
+            <!--<i class="list-single-icon fa fa fa-trash-o" (click)="delete(question.id)"></i>-->
+
+             <button mat-button class="list-single-icon fa fa fa-trash-o" (click)="delete(question.id)">
+              <mat-icon>del</mat-icon>
+            </button>
+            
             <span class="list-single-icon-number"></span>
             <span class="list-single-icon-number">{{question.answers? question.answers.length: 0}} Answers</span>
           </p>

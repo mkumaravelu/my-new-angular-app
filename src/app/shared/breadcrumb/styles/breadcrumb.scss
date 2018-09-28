@@ -1,0 +1,26 @@
+breadcrumb {
+    .breadcrumb {
+      background: transparent;
+      border-radius: 0;
+      margin: 20px 0;
+      padding: 0;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+  
+      .breadcrumb-item {
+        display: inline-block;
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1.9px;
+        
+        a {
+          display: inline-block;
+          color: #FFF;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  

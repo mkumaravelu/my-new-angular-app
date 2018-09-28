@@ -14,7 +14,7 @@ export class QuestionAnswersResolver implements Resolve<any> {
     let questionSlug = route.paramMap.get('questionSlug');
 
     return new Promise((resolve, reject) => {
-      this.questionsService.getQuestionsBySlug(questionSlug)
+      this.questionsService.getQuestionBySlug(questionSlug)
       .then(question => {
         let breadcrumbs = [
           { url: '/', label: 'Categories' },
@@ -24,6 +24,7 @@ export class QuestionAnswersResolver implements Resolve<any> {
 
         return resolve({
           question: question,
+          categorySlug:question.categorySlug,
           breadcrumbs: breadcrumbs
         });
       },

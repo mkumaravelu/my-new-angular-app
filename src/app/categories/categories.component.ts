@@ -5,7 +5,7 @@ import {CategoryModel} from './category.model';
 @Component({
   selector: 'categories',
   templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.scss']
+  styleUrls: ['./categories.scss']
 })
 export class CategoriesComponent implements OnInit {
 
@@ -19,7 +19,7 @@ export class CategoriesComponent implements OnInit {
   ngOnInit():void {
     this.route.data.subscribe(routeData=>
     {
-      let data = routeData['data']
+      let data = routeData['data'];
       if(data)
       {
         this.categories= data.categories;
@@ -31,3 +31,4 @@ export class CategoriesComponent implements OnInit {
   }
 
 }
+

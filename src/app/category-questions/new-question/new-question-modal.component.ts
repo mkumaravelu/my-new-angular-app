@@ -47,7 +47,7 @@ export class NewQuestionModalComponent implements OnInit{
         this.questionsService.createQuestion(data)
         .then(question=> {
             this.thisDialogRef.close(question);
-            this.thisDialogRef.reset();
+            this.questionForm.reset();
         });
         
     }

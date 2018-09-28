@@ -14,7 +14,7 @@ import { NewQuestionModalComponent } from './new-question/new-question-modal.com
     templateUrl: './category-questions.component.html'
   })
 
-  export class CategoryQuestionsComponent implements OnInit() {
+  export class CategoryQuestionsComponent implements OnInit {
 
     questions: Array<Question>;
     categoryTitle: string;
@@ -25,18 +25,18 @@ import { NewQuestionModalComponent } from './new-question/new-question-modal.com
         private route: ActivatedRoute,
         public questionsService: QuestionsService,
         public answersService: AnswersService,
-        public dialog: MatDialog){}
+        public dialog: MatDialog
+      ){}
         
       ngOnInit():void
       {
         this.route.data.subscribe(routeData=> {
-          let data = routeData["data"];
-          
+          let data = routeData['data'];
           if(data)
           {
             this.questions = data.questions;
-            this.categoryTitle = data.categoryTitle;
-            this.categorySlug = data.categorySlug;
+            this.categoryTitle = data.category_title;
+            this.categorySlug = data.category_slug;
           }     
         }
         )
@@ -49,7 +49,7 @@ import { NewQuestionModalComponent } from './new-question/new-question-modal.com
           then(questions=>this.questions=questions);
        }
 
-       openNewQuestionModel(categorySlug)
+       openNewQuestionModal(categorySlug)
        {
         let dialogRef = this.dialog.open(NewQuestionModalComponent,{
           data:{categorySlug:categorySlug}
@@ -70,7 +70,7 @@ import { NewQuestionModalComponent } from './new-question/new-question-modal.com
           data: {questionId: questionId}
         });
 
-        dialogRef.afterClosed().subscribe(confirms => {
+        dialogRef.afterClosed().subscribe(confirm => {
 
           if(confirm)
           {

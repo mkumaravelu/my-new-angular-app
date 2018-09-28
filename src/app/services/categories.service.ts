@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/Http';
+import { Http } from '@angular/http';
 import {Observable} from "rxjs/Observable";
 import { CategoryModel } from '../categories/category.model';
 
@@ -10,8 +10,8 @@ constructor(private http: Http){};
 
 getCategories(): Promise<CategoryModel[]>
 {
-    return this.http.get('./assets/categories.json').toPromise().
-        then(res=> res.json() as CategoryModel[] );
+    return this.http.get("./assets/categories.json").toPromise().
+        then( res=> res.json() as CategoryModel[] );
 }
 
 getCategoryBySlug(slug:string)

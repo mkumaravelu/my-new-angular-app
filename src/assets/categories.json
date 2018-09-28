@@ -1,0 +1,59 @@
+[
+    {
+      "slug": "java",
+      "title": "Java",
+      "image": "https://www.shareicon.net/download/2016/09/23/833700_windows.svg",
+      "description": "Angular is a platform that makes it easy to build applications with the web.",
+      "tags": [
+        {
+          "name": "Java 6"
+        },
+        {
+          "name": "Java 7"
+        },
+        {
+          "name": "Java 8"
+        },
+        {
+          "name": "Java 9"
+        }
+      ]
+    },
+    {
+      "slug": "angular",
+      "title": "Angular",
+      "image": "https://angular.io/assets/images/logos/angular/angular.svg",
+      "description": "Angular is a platform that makes it easy to build applications with the web.",
+      "tags": [
+        {
+          "name": "Angular JS"
+        },
+        {
+          "name": "Angular 2"
+        },
+        {
+          "name": "Angular 4"
+        },
+        {
+          "name": "Angular 5"
+        }
+      ]
+    },
+    {
+      "slug": "typescript",
+      "title": "Typescript",
+      "image": "https://www.shareicon.net/download/2015/08/31/93654_php.svg",
+      "description": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
+      "tags": [
+        {
+            "name": "Javascript"
+        },
+        {
+            "name": "Webpack"
+        },
+        {
+            "name": "Typescript 2.x"
+        }
+      ]
+    }
+  ]

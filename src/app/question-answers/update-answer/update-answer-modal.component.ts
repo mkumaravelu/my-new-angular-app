@@ -2,7 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Validators, FormGroup, FormControl} from '@angular/forms';
 import { AnswersService } from '../../services/answers.service';
-import { Answer } from '../../../../sdk';
+//import { Answer } from '../../../../sdk';
+//import { Question } from '../../../sdk/models/Question';
+
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 //import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group
 

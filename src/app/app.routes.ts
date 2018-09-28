@@ -1,4 +1,4 @@
-import {Routes, Route} from '@angular/router';
+import {Routes} from '@angular/router';
 
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesResolver } from './categories/categories.resolver';
@@ -23,7 +23,7 @@ export const routes: Routes = [
     path:'questions/about/:categorySlug',
     component: CategoryQuestionsComponent,
     resolve:{
-        data:CategoryQuestionsComponent
+        data:CategoryQuestionsResolver
     }
 },
 

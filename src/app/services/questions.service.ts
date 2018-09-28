@@ -1,13 +1,15 @@
-import { Injectable } from "@angular/core";
-import {QuestionApi,Question,LoopBackFilter} from '../../../sdk';
+import { Injectable } from '@angular/core';
+//import {Question,LoopBackFilter} from 'sdk/models';
+//import {QuestionApi} from 'sdk/services/custom';
+import { QuestionApi, Question, LoopBackFilter } from '../../../sdk';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-
-export class QuestionsService
-{
-    constructor(private questionApi: QuestionApi)
-    {}
+export class QuestionsService{
+    constructor(
+        private questionApi: QuestionApi
+    ){}
+    
     getQuestions()
     {
         let filter: LoopBackFilter ={
@@ -16,7 +18,7 @@ export class QuestionsService
             }
         }
 
-        return this.questionApi.find<Question>(filter).toPromise();
+        return this.questionApi.find<Question>(filter).toPromise()
     }
 
     getQuestion(questionId)
@@ -24,7 +26,7 @@ export class QuestionsService
         let query ={
             id: questionId
         }
-        return this.questionApi.find<Question>({where:query}).toPromise();
+        return this.questionApi.find<Question>({where:query}).toPromise()
     }
 
     getQuestionsByCategory(category_slug)
@@ -36,15 +38,15 @@ export class QuestionsService
             },
             "where":
             {
-                "category_slug":category_slug
+                "categorySlug":category_slug
             }
         }
 
-        return this.questionApi.find<Question>(filter).toPromise();
+        return this.questionApi.find<Question>(filter).toPromise()
 
     }
 
-    getQuestionsBySlug(slug)
+    getQuestionBySlug(slug)
     {
         let filter : LoopBackFilter = {
             "include":
@@ -57,7 +59,7 @@ export class QuestionsService
             }
         }
 
-        return this.questionApi.find<Question>(filter).toPromise();
+        return this.questionApi.findOne<Question>(filter).toPromise()
     }
 
 

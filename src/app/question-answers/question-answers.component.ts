@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AnswersService } from '../services/answers.service'
-import { Question } from '../../../sdk/models/Question';
+import { Question } from '../../../sdk/models';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DeleteAnswerModalComponent } from './delete-answer/delete-answer-modal.component';
 import { NewAnswerModalComponent } from './new-answer/new-answer-modal.component';

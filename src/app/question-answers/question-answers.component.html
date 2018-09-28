@@ -6,11 +6,20 @@
         <mat-list-item class="list-item" *ngFor="let answer of question.answers">
           <span matLine class="answer"> {{answer.answer}} </span>
           <p matLine class="icons-line">
-            <i class="list-single-icon fa fa-thumbs-o-up" (click)="addPositiveVote(answer)" aria-hidden="true"></i>
+            <!-- <i class="list-single-icon fa fa-thumbs-o-up" (click)="addPositiveVote(answer)" aria-hidden="true"></i>-->
+            <button mat-icon-button class="list-single-icon fa fa-thumbs-o-up" (click)="addPositiveVote(answer)" aria-hidden="true">
+                <mat-icon>+</mat-icon>
+            </button>
             <span class="list-single-icon-number">{{answer.positiveVotes}}</span>
-            <i class="list-single-icon fa fa-thumbs-o-down" (click)="addNegativeVote(answer)"></i>
+            <!--<i class="list-single-icon fa fa-thumbs-o-down" (click)="addNegativeVote(answer)"></i>-->
+            <button mat-icon-button class="list-single-icon fa fa-thumbs-o-down" (click)="addNegativeVote(answer)">
+                <mat-icon>-</mat-icon>
+            </button>
             <span class="list-single-icon-number">{{answer.negativeVotes}}</span>
-            <i class="list-single-icon fa fa fa-trash-o" (click)="delete(answer.id)"></i>
+            <!--<i class="list-single-icon fa fa fa-trash-o" (click)="delete(answer.id)"></i>-->
+            <button mat-button class="list-single-icon fa fa fa-trash-o" (click)="delete(answer.id)">
+                <mat-icon>del</mat-icon>
+            </button>
             <span class="list-single-icon-number"></span>
             <i class="list-single-icon fa fa-pencil" (click)="openUpdateAnswerModal(answer)"></i>
             <span class="list-single-icon-number"></span>

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Resolve} from '@angular/router';
 import {CategoriesService} from '../services/categories.service';
-import { reject } from 'q';
+//import { reject } from 'q';
 
 @Injectable()
 export class CategoriesResolver implements Resolve<any> {
@@ -16,7 +16,7 @@ export class CategoriesResolver implements Resolve<any> {
 
         (resolve,reject)=> {
 
-            let breadcrumps = {url:'/',label:'Categories'};
+            let breadcrumbs = [{url:'/',label:'Categories'}];
 
     //get categories from locl json file
 
@@ -25,7 +25,7 @@ export class CategoriesResolver implements Resolve<any> {
                 categories => {
                     return resolve({
                         categories:categories,
-                        breadcrumps:breadcrumps
+                        breadcrumbs:breadcrumbs
                     });
                 },
                 err => {
